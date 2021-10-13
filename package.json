@@ -1,12 +1,23 @@
 {
   "name": "starter",
-  "source": "src/index.html",
+  "version": "0.0.1",
+  "author": "Marcus Asplund <marcus@greatname.se> (@marcusasplund)",
+  "bugs": {
+    "url": "https://github.com/marcusasplund/starter/issues"
+  },
+  "source": ["./src/first/index.html", "./src/second/index.html"],
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build"
+    "start": "standard && parcel --open",
+    "build": "rm -rf build && standard && parcel build"
+  },
+  "standard": {
+    "ignore": [
+      "dist/"
+    ]
   },
   "devDependencies": {
-    "parcel": "latest"
+    "parcel": "latest",
+    "standard": "*"
   }
 }
